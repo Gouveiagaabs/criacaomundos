@@ -1,0 +1,25 @@
+import random
+
+estetic = ["Steampunk","Cyberpunk","Fantasia Épica", "Retrofuturismo", "Pós-Apocalíptico", "Noir",
+           "Mundo Subaquático", "Gótico", "Espacial", "Biofuturismo", "Art Noveau", "Distopia", "Psicodélico"]
+ambientacao = ["Medieval", "Era Vitoriana", "Renascentista", "Piratas", "Faroeste", "Era Antiga", "Japonesa",
+               "Rússia - Guerra Fria", "Inglaterra Antiga", "Latino-Americana", "Abstração Atual"]
+elementos = ["Raças Alternativas", "Magia", "Aprimoramentos Tecnológicos", "Seres Divinos", "Poderes",
+             "Relíquias Místicas", "Mitológico", "Sistema de Clãs", "Monstros", "Alma", "Religião", "Antropozoomorfia", "Alienígenas"]
+tamanho = ["Cidade", "Três ou mais Biomas", "Arquipélogo", "Continente", "Um Planeta", "Dois ou mais Planetas", "Duas ou mais Realidades Diferentes"]
+tom = ["Sombrio", "Cômico", "Satírico", "Romântico", "Distópico", "Fantástico", "Aventuresco", "Melancólico", "Alegre"]
+conflito = ["Guerra Civil", "Conflito Étinico", "Tirania ou Regime Totalitário", "Crise Ambiental", "Rebelião contra Conquistas",
+            "Praga ou Epidemia", "Conflito de Classes", "Conflito Cultural", "Ameaça Desconhecida"]
+chooseelementos = []
+for items in range (3):
+    esc = (random.choice(elementos))
+    chooseelementos.append(esc)
+    elementos.remove(esc)
+def rollworld():
+    print("Estética do Mundo: " + random.choice(estetic))
+    print("Ambientação: " + random.choice(ambientacao))
+    print("Elementos do Mundo: " + chooseelementos[1] + ", " + chooseelementos[2] + ", " + chooseelementos[0])
+    print("Tamanho: " + random.choice(tamanho))
+    print("Tom: " + random.choice(tom))
+    print("Conflito: " + random.choice(conflito))
+rollworld()
